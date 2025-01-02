@@ -1,21 +1,11 @@
 #A palindrome is a word, sentence, verse, or even number that reads the same backward or forward.
-def is_palindrome():
-    item = input("Enter item: ")
+def is_palindrome(item):
+    # Make the item lowercase
+    normalized_item = item.lower()
+    # Check if the item reads the same forwards and backwards
+    return normalized_item == normalized_item[::-1]
 
-    while True:
-        if (item == item[::-1]):
-            print(f'{item} is a palindrome.')
-            break
-        
-        else:
-            print(f'{item} is not a palindrome.')
-            item = input("Enter item: ")
-
-is_palindrome()
-
-
-def check_palindromes():
-    my_list = [
+my_list = [
     'mummy', 
     'hannah', 
     'murder for a jar of red rum', 
@@ -27,14 +17,6 @@ def check_palindromes():
     'madam'
     ]
 
-    for i in my_list:
-        # print(i) 
-        if i == i[::-1]:
-            print(f' {i} is a palindrome.')
-        else:
-            print(f'{i} is not a palindrome')
-
-    
-check_palindromes()
-
-
+for item in my_list:
+    result = is_palindrome(item)
+    print(f'Is "{item}" a palindrome? {result}')

@@ -1,17 +1,17 @@
 #Fibonacci Sequence Generator: A Fibonacci sequence is a series of numbers where each number is the sum of the two preceding ones.
-# a, b = 0, 1
-# while a < 10:
-#     print(a)
-#     a, b = b, a+b
+a, b = 0, 1
+while a < 10:
+    print(a)
+    a, b = b, a+b
 
-# def generate_fibonacci(n):
-#     n = int(input("Enter fibonacci number: "))
-#     n, o = 0, 1
-#     while n < 10:
-#         print(n)
-#         n, o = o, n+o
+def generate_fibonacci(n):
+    n = int(input("Enter fibonacci number: "))
+    n, o = 0, 1
+    while n < 10:
+        print(n)
+        n, o = o, n+o
 
-# generate_fibonacci(20) #Argument passed (20) is ignored by input()
+generate_fibonacci(20) #Argument passed (20) is ignored by input()
 
 def print_fibonacci():
     fib_list = []
